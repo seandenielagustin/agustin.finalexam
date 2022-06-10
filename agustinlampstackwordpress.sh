@@ -21,6 +21,7 @@ echo "Enabling HTTPD"
 systemctl enable httpd.service
 
 #install ferodara
+echo "Installing Fedora"
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 # install remi
@@ -67,10 +68,12 @@ echo "Installing -y php php-mysql
 echo "Installing PHP-FPM
 yum install -y php-fpm
 
-#This command will create a database named "wordpress"
+# creating database
+echo "Creating database in wordpress"
 mysql -u root -pSEAN -e "CREATE DATABASE wordpress;"
 
-#This command will create a new MySQL user account and grants privileges to database "wordpress"(commands to input)
+# creating new MYSQL ACCOUNT and PASSWORD
+echo "Creating new MYSQL ACCOUNT and PASSWORD"
 mysql -u root -pSEAN -e "CREATE USER wp_user@localhost IDENTIFIED BY 'seanagustin';"
 mysql -u root -pSEAN -e "GRANT ALL PRIVILEGES ON wordpress.* TO wp_user@localhost IDENTIFIED BY 'seanagustin';"
 mysql -u root -pSEAN -e "FLUSH PRIVILEGES;"
