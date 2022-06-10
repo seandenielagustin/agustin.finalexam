@@ -20,3 +20,4 @@ mysqldump -u root -pSEAN wordpress > wordpress${date}.sql
 
 # compress the wordpress
 gzip -cv wordpress${date}.sql > wordpress${date}.gz 
+
