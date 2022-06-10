@@ -127,3 +127,4 @@ cat wp-config-sample.php | sed -e 's/database_name_here/wordpress/g' | sed -e 's
 # restart HTTPD
 echo "Restarting HTTPD SERVICES"
 systemctl restart httpd.service
+
